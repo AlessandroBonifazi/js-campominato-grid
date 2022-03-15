@@ -1,0 +1,23 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#grid {
+    height: 500px;
+    width: 500px;
+    margin: 50px auto;
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cell {
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    border: 1px solid black;
+    text-align: center;
+}
+.cell.bg-blue {
+    background-color: lightskyblue;
+}
