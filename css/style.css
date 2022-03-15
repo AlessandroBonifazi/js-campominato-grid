@@ -13,10 +13,24 @@
     flex-wrap: wrap;
 }
 .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
     height: calc(100% / 10);
     width: calc(100% / 10);
-    border: 1px solid black;
-    text-align: center;
+}
+.cell-1 {
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+}
+.cell-2 {
+    height: calc(100% / 9);
+    width: calc(100% / 9);
+}
+.cell-3 {
+    height: calc(100% / 7);
+    width: calc(100% / 7);
 }
 .cell.bg-blue {
     background-color: lightskyblue;
