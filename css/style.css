@@ -17,20 +17,8 @@
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    height: calc(100% / 10);
-    width: calc(100% / 10);
-}
-.cell-1 {
-    height: calc(100% / 10);
-    width: calc(100% / 10);
-}
-.cell-2 {
-    height: calc(100% / 9);
-    width: calc(100% / 9);
-}
-.cell-3 {
-    height: calc(100% / 7);
-    width: calc(100% / 7);
+    height: 50px;
+    width: 50px;
 }
 .cell.bg-blue {
     background-color: lightskyblue;

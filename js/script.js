@@ -12,18 +12,23 @@ function createCell(level) {
     // add class to div
     cell.classList.add('cell');
     return cell;
-    // if (level == 1) {
-    //     cell.classList.add('cell-1');
-    // } else if (level == 2) {
-    //     cell.classList.add('cell-2');
-    // } else if (level == 3) {
-    //     cell.classList.add('cell-3');
-    // }
 }
 
-let columns = 10;
-let rows = 10;
-const totalCells = columns * rows;
+// Config
+let totalCells;
+
+let level = parseInt(prompt("Choose level 1-2-3?"));
+
+while (level < 1 || level > 3 || isNaN(level)) {
+    level = parseInt(prompt("Choose level 1-2-3?"));
+}
+if (level === 1) { // level 1 (1-100)
+    totalCells = 100;
+} else if (level === 2) { // level 2 (1-81)
+    totalCells = 81;
+} else if (level === 3) { // level 3 (1-49)
+    totalCells = 49;
+}
 
 for (let i = 0; i < totalCells; i++) {
     const grid = document.getElementById('grid');
@@ -32,26 +37,9 @@ for (let i = 0; i < totalCells; i++) {
     // inner text
     cell.innerText = (i + 1);
     cell.id = i;
-    // add bg on click
-    cell.addEventListener('click', function (event) {
-        cell.classList.toggle('bg-blue');
-    });
     // add cell to div
     grid.appendChild(cell);
+    // add bg on click
+    cell.addEventListener('click', () => cell.classList.toggle('bg-blue'));
 }
 
-// let level = parseInt(prompt("Choose level 1-2-3?"));
-
-// while (level < 1 || level > 3 || isNaN(level)) {
-//     level = parseInt(prompt("Choose level 1-2-3?"));
-// }
-// if (level == 1) { // level 1 (1-100)
-//     rows = 10;
-//     columns = 10;
-// } else if (level == 2) { // level 2 (1-81)
-//     rows = 9;
-//     columns = 9;
-// } else if (level == 3) { // level 3 (1-49)
-//     rows = 7;
-//     columns = 7;
-// }
